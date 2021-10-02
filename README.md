@@ -1,4 +1,4 @@
-**Random password guest generatr for routers using Asuswrt-Merlin firmware**\
+**Random password guest generator for routers using Asuswrt-Merlin firmware**\
 Setting a random password for guest wifi in Asuswrt-Merlin firmware
 
 This script is a personal improvement of the original one. You can find it here -> [Setting a random password for guest wifi](https://github.com/RMerl/asuswrt-merlin.ng/wiki/Setting-a-random-password-for-guest-wifi)
