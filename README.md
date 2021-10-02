@@ -8,7 +8,7 @@ The main changes are:
 **1** Add gotify notification\
 **2** Replace the API generator with this one [passwordwolf](https://passwordwolf.com). It appear that [passwd.me](https://passwd.me) is no longer active\
 **3** Fix the openssl instruction\
-**4** remove the e-mail functionality since I am still working to understand it\
+**4** remove the e-mail functionality since I am still working to understand it
 
 These may require additional software to be installed over & above the default busy box installation so if you find the the scritp is not working check the error message.
 Also, I am using a Gotify server installed in my local network
