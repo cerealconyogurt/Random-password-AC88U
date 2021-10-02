@@ -24,7 +24,8 @@ There are four methodes to get a password:
 
 To install this very simple scripts you need to copy both the script and the phrases file in `/jffs/scripts/` folder in your router:
 
-`curl --retry 3 -O "https://raw.githubusercontent.com/cerealconyogurt/Random-password-AC88U/main/newpass.sh" -O "https://raw.githubusercontent.com/cerealconyogurt/Random-password-AC88U/main/newpass-phrases.txt" && chmod 0755 /jffs/scripts/newpass.sh`
+`curl --retry 3 "https://raw.githubusercontent.com/cerealconyogurt/Random-password-AC88U/main/newpass.sh" -o "/jffs/scripts/newpass" && chmod 0755 /jffs/scripts/newpass`\
+`curl --retry 3 "https://raw.githubusercontent.com/cerealconyogurt/Random-password-AC88U/main/newpass-phrases.txt" -o "/jffs/scripts/newpass-phrases"`
 
 and ensure you make it executable `chmod a+rx /jffs/scripts/newpass.sh`
 
