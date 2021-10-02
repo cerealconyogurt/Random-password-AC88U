@@ -12,8 +12,8 @@ datepasswd=`date +"%A%B%d"`
 ############################################################################
 
 getrandomphrase () {
-    if [ -f /jffs/scripts/newpass-phrases.txt ]; then
-        phrasecount=`wc -l /jffs/scripts/newpass-phrases.txt | cut -d " " -f 1`
+    if [ -f /jffs/scripts/newpass-phrases ]; then
+        phrasecount=`wc -l /jffs/scripts/newpass-phrases | cut -d " " -f 1`
         if [ $phrasecount == 0 ]; then
             # file is empty
             phrasepasswd=$datepasswd
@@ -23,7 +23,7 @@ getrandomphrase () {
                 # cannot get a random number, bailing
                 phrasepasswd=$datepasswd
             else
-                phrasetext=`sed -n $(( $randomnumber % $phrasecount + 1 ))p /jffs/scripts/newpass-phrases.txt`
+                phrasetext=`sed -n $(( $randomnumber % $phrasecount + 1 ))p /jffs/scripts/newpass-phrases`
                 if [ $phrasetext == "" ]; then
                     # blank lines in file, bailing
                     phrasepasswd=$datepasswd
