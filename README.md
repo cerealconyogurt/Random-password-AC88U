@@ -23,9 +23,12 @@ There are four methodes to get a password:
 **Install**
 
 To install this very simple scripts you need to copy both the script and the phrases file in `/jffs/scripts/` folder in your router:
-
-`curl --retry 3 "https://raw.githubusercontent.com/cerealconyogurt/Random-password-AC88U/main/newpass.sh" -o "/jffs/scripts/newpass" && chmod 0755 /jffs/scripts/newpass`\
-`curl --retry 3 "https://raw.githubusercontent.com/cerealconyogurt/Random-password-AC88U/main/newpass-phrases.txt" -o "/jffs/scripts/newpass-phrases"`
+```
+curl --retry 3 "https://raw.githubusercontent.com/cerealconyogurt/Random-password-AC88U/main/newpass.sh" -o "/jffs/scripts/newpass" && chmod 0755 /jffs/scripts/newpass
+```
+```
+curl --retry 3 "https://raw.githubusercontent.com/cerealconyogurt/Random-password-AC88U/main/newpass-phrases.txt" -o "/jffs/scripts/newpass-phrases"
+```
 
 and ensure you make it executable `chmod a+rx /jffs/scripts/newpass`
 
@@ -43,15 +46,19 @@ Try and have a reasonable number of entries in here, or you will end up with the
 
 In order to chose what functions you want to use, you just need to uncomment the function in the script:
 
-`## Now call the function we want to use`\
-`# getrandomphrase`\
-`# getrandopenssl`\
-`# getpasswfromapi`
+```
+## Now call the function we want to use
+# getrandomphrase
+# getrandopenssl
+# getpasswfromapi
+```
 
 To get this process to run at 4am each day, add the following into `/jffs/scripts/services-start` and make it executable :
 
-`#!/bin/sh
-cru a ResetGuestPassword "0 4 * * * /jffs/scripts/newpass"`
+```
+#!/bin/sh
+cru a ResetGuestPassword "0 4 * * * /jffs/scripts/newpass"
+```
 
 This will set it up so that the script will be run at 4am every day.
 
