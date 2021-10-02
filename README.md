@@ -27,7 +27,7 @@ To install this very simple scripts you need to copy both the script and the phr
 `curl --retry 3 "https://raw.githubusercontent.com/cerealconyogurt/Random-password-AC88U/main/newpass.sh" -o "/jffs/scripts/newpass" && chmod 0755 /jffs/scripts/newpass`\
 `curl --retry 3 "https://raw.githubusercontent.com/cerealconyogurt/Random-password-AC88U/main/newpass-phrases.txt" -o "/jffs/scripts/newpass-phrases"`
 
-and ensure you make it executable `chmod a+rx /jffs/scripts/newpass.sh`
+and ensure you make it executable `chmod a+rx /jffs/scripts/newpass`
 
 **Setting up**
 
@@ -51,7 +51,7 @@ In order to chose what functions you want to use, you just need to uncomment the
 To get this process to run at 4am each day, add the following into `/jffs/scripts/services-start` and make it executable :
 
 `#!/bin/sh
-cru a ResetGuestPassword "0 4 * * * /jffs/scripts/newpass.sh"`
+cru a ResetGuestPassword "0 4 * * * /jffs/scripts/newpass"`
 
 This will set it up so that the script will be run at 4am every day.
 
